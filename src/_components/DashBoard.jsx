@@ -35,7 +35,7 @@ const Dashboard = () => {
     // Fetch Data Functions
     const fetchUsers = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/api/admin/allUsers", {
+            const response = await axios.get("https://sb-sdp.onrender.com/api/admin/allUsers", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
@@ -48,7 +48,7 @@ const Dashboard = () => {
 
     const fetchStudents = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/api/admin/allStudents", {
+            const response = await axios.get("https://sb-sdp.onrender.com/api/admin/allStudents", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
@@ -61,7 +61,7 @@ const Dashboard = () => {
 
     const fetchFaculty = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/api/admin/allFaculty", {
+            const response = await axios.get("https://sb-sdp.onrender.com/api/admin/allFaculty", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
@@ -74,7 +74,7 @@ const Dashboard = () => {
 
     const fetchCourses = async () => {
         try {
-            const response = await axios.get("http://localhost:8080/api/admin/allCourses", {
+            const response = await axios.get("https://sb-sdp.onrender.com/api/admin/allCourses", {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
@@ -103,7 +103,7 @@ const Dashboard = () => {
     const addCourse = async () => {
         try {
             const response = await axios.post(
-                `http://localhost:8080/api/admin/createCourse`,
+                `https://sb-sdp.onrender.com/api/admin/createCourse`,
                 newCourse,
                 {
                     headers: {
@@ -121,7 +121,7 @@ const Dashboard = () => {
 
     const deleteCourse = async (courseId) => {
         try {
-            await axios.delete(`http://localhost:8080/api/admin/deleteCourse/${courseId}`, {
+            await axios.delete(`https://sb-sdp.onrender.com/api/admin/deleteCourse/${courseId}`, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },
@@ -136,7 +136,7 @@ const Dashboard = () => {
     const assignCourseToStudent = async (studentId, courseId) => {
         try {
             await axios.post(
-                `http://localhost:8080/api/admin/assignCourseToStudent`,
+                `https://sb-sdp.onrender.com/api/admin/assignCourseToStudent`,
                 null,
                 {
                     params: { studentId, courseId },
@@ -160,7 +160,7 @@ const Dashboard = () => {
         // Make the API call to assign the course
         axios
             .post(
-                `http://localhost:8080/api/admin/assignCourseToFaculty`,
+                `https://sb-sdp.onrender.com/api/admin/assignCourseToFaculty`,
                 null, // No request body required
                 {
                     params: { facultyId, courseId }, // Pass facultyId and courseId as query parameters
@@ -188,7 +188,7 @@ const Dashboard = () => {
 
     const changeUserRole = async (userId) => {
         try {
-            await axios.put(`http://localhost:8080/api/admin/changeRole/${userId}`, null, {
+            await axios.put(`https://sb-sdp.onrender.com/api/admin/changeRole/${userId}`, null, {
                 headers: {
                     Authorization: `Bearer ${localStorage.getItem("token")}`,
                 },

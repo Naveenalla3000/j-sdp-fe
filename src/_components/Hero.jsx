@@ -21,7 +21,7 @@ const Hero = () => {
             <div
               className="mt-8 flex flex-wrap gap-4"
             >
-              <a  href='/login' className="px-6 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">
+              <a  href='/register' className="px-6 py-2 rounded bg-blue-600 text-white hover:bg-blue-700">
                 Get Started
               </a>
               <a href='/login' className="px-6 py-2 rounded border border-blue-600 text-blue-600 hover:bg-blue-100 dark:text-blue-300 dark:border-blue-300 dark:hover:bg-blue-950">
